@@ -36,6 +36,7 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	// poll the trigger volume
 	if (GetTotalMassOfActorsOnPlate() > TriggerMass)
 	{
+
 		OnOpen.Broadcast(); // From Blueprint
 	}
 	else 
@@ -50,8 +51,9 @@ float UOpenDoor::GetTotalMassOfActorsOnPlate()
 
 	// Find all the overlaping actors
 	TArray<AActor*> OverlappingActors;
-	if (!PressurePlate) { return TotalMass; }
+	if (!PressurePlate) return TotalMass;
 	PressurePlate->GetOverlappingActors(OUT OverlappingActors);
+
 	// Iterate through them adding their masses
 	for (const auto& Actor : OverlappingActors)
 	{

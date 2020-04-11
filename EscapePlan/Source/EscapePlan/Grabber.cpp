@@ -2,6 +2,7 @@
 
 #include "Grabber.h"
 #include "GameFramework/PlayerController.h"
+#include "Bonus/Door.h"
 #include "Engine/World.h"
 #include <Runtime\Engine\Public\DrawDebugHelpers.h>
 #define OUT

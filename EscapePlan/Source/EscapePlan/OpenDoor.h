@@ -33,9 +33,9 @@ public:
 	UPROPERTY(BlueprintAssignable)
 	FDoorEvent OnClose;
 
-private:
+//private:
 	
-UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere)
 	ATriggerVolume* PressurePlate = nullptr;
 
 	UPROPERTY(EditAnywhere)
